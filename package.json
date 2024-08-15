@@ -18,8 +18,10 @@
   },
   "dependencies": {
     "foundation-sites": "latest",
+    "intersection-observer": "^0.12.2",
     "jquery": ">=3.6.0",
     "motion-ui": "latest",
+    "scrollama": "^3.2.0",
     "what-input": ">=5.2.10"
   },
   "devDependencies": {
