@@ -1,0 +1,77 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url('../img/Rio.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.scrollama-container {
+  margin: 0;
+  padding: 0;
+}
+
+.step {
+  height: 100vh;
+  color: white;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+#step2, #step3 {
+  text-align: center;
+  width: 100%;
+  padding: 0 200px;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fixed-content {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px;
+  z-index: 10;
+  color: grey;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .left-content {
+    width: 40%;
+  }
+  .right-content {
+    width: 60%;
+  }
+}
