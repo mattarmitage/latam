@@ -7,11 +7,6 @@ body {
   background-attachment: fixed !important;
 }
 
-.scrollama-container {
-  margin: 0;
-  padding: 0;
-}
-
 .step {
   height: 100vh;
   color: white;
@@ -21,16 +16,15 @@ body {
 
 #step2, #step3 {
   text-align: center;
-  width: 100%;
   padding: 0 200px;
 }
 
 .fade-out {
-  animation: fadeOut 1s forwards;
+  animation: fadeOut 0.5s forwards;
 }
 
 .fade-in {
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeOut {
@@ -58,20 +52,4 @@ body {
   padding: 10px;
   z-index: 10;
   color: grey;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  ul {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .left-content {
-    width: 40%;
-  }
-  .right-content {
-    width: 60%;
-  }
 }
