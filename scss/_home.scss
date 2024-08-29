@@ -1,4 +1,4 @@
-body {
+.page-1 {
   height: 100%;
   margin: 0;
   background-image: url('../img/Rio.jpg') !important;
@@ -7,14 +7,46 @@ body {
   background-attachment: fixed !important;
 }
 
-.step {
-  height: 100vh;
-  color: white;
+.page-3 {
+  height: 100%;
+  margin: 0;
+  background-image: url('../img/Santiago.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.page-5 {
+  background-color: lightblue;
+  min-height: 120vh;
+}
+
+.page-7, .page-9 {
+  background-color: lightblue;
+  min-height: 100vh;
+
+  h2 {
+    color: rgb(61, 187, 164);
+    font-size: 80px;
+  }
+}
+
+#step1, #step2, #step3, #step5, #step6 {
+  min-height: 100vh;
   line-height: 50px;
   font-size: 24px;
 }
 
-#step2, #step3 {
+#step7 {
+  min-height: 100vh;
+}
+
+#step1, .page-3 {
+  color: white;
+}
+
+#step2, #step3, #step6 {
+  color: white;
   text-align: center;
   padding: 0 200px;
 }
@@ -52,4 +84,120 @@ body {
   padding: 10px;
   z-index: 10;
   color: grey;
+}
+
+.fixed {
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  width: 270px;
+}
+
+.fixed-img {
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  width: 570px;
+}
+
+.footer {
+  .left-content {
+    strong {
+      color: grey;
+    }
+  }
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.references {
+  padding-top: 200px;
+}
+
+.page-2 {
+  .left-section {
+    p {
+      padding-left: 20px;
+      font-size: 18px;
+      color: rgb(171, 67, 161);
+    }
+  }
+}
+
+.page-4, .page-6, .page-8 {
+  .left-section {
+    p {
+      padding-left: 20px;
+      font-size: 16px;
+      color: rgb(61, 187, 164);
+    }
+  }
+}
+
+.bar-container {
+  display: flex;
+
+  span {
+    margin-right: 5px;
+    height: 20px;
+
+  }
+
+  .width-100 {
+    width: 80%;
+  }
+
+  .width-65 {
+    width: 65%;
+  }
+
+  .width-60 {
+    width: 60%;
+  }
+
+  .width-40 {
+    width: 40%;
+  }
+
+  .width-35 {
+    width: 35%;
+  }
+
+  .width-20 {
+    width: 20%;
+  }
+
+  .width-10 {
+    width: 10%;
+  }
+
+  .width-9 {
+    width: 9%;
+  }
+
+  .width-8 {
+    width: 8%;
+  }
+
+  .grey {
+    background-color: grey;
+  }
+
+  .pink {
+    background-color: pink;
+  }
+
+  .orange {
+    background-color: orange;
+  }
+
+  .cyan {
+    background-color: cyan;
+  }
+
+  .gold {
+    background-color: gold;
+  }
 }
