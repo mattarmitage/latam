@@ -1,9 +1,12 @@
 .white-text {
   color: white;
 }
-.ref-page {
-  position: relative;
-  padding-bottom: 200px;
+.small-text {
+  font-size: 12px;
+  padding-top: 16px;
+}
+.references {
+  margin-top: 64px;
 }
 .logo {
   img {
@@ -13,18 +16,9 @@
     margin: 16px 0;
   }
 }
-.middle-content {
-  position: relative;
+.page-content-start {
+  margin-top: 64px;
 }
-.middle-content p {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .page-1 {
   background-image: url('../img/Rio.jpg') !important;
   background-size: cover !important;
@@ -53,7 +47,7 @@
 .page-7,
 .page-9 {
   background-color: lightblue;
-  min-height: 100vh;
+  // min-height: 100vh;
 
   h2 {
     color: rgb(61, 187, 164);
@@ -67,9 +61,9 @@
   // font-size: 24px;
 }
 
-#step7 {
-  min-height: 100vh;
-}
+// #step7 {
+//   min-height: 100vh;
+// }
 
 // #step1,
 // .page-3 {
@@ -171,15 +165,6 @@
       color: grey;
     }
   }
-}
-
-.small-text {
-  font-size: 12px;
-}
-
-.references {
-  position: absolute;
-  bottom: 10px;
 }
 
 .page-2 {
