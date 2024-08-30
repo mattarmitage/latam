@@ -1,0 +1,241 @@
+.ref-page {
+  position: relative;
+  padding-bottom: 200px;
+}
+.page-1 {
+  height: 100%;
+  margin: 0;
+  background-image: url('../img/Rio.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.page-3 {
+  height: 100%;
+  margin: 0;
+  background-image: url('../img/Santiago.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.page-5 {
+  background-color: lightblue;
+  min-height: 120vh;
+}
+
+.extra-height {
+  min-height: 200vh;
+}
+
+.page-7, .page-9 {
+  background-color: lightblue;
+  min-height: 100vh;
+
+  h2 {
+    color: rgb(61, 187, 164);
+    font-size: 80px;
+  }
+}
+
+#step1, #step2, #step3, #step5, #step6 {
+  min-height: 100vh;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+#step7 {
+  min-height: 100vh;
+}
+
+#step1, .page-3 {
+  color: white;
+}
+
+#step2, #step3, #step6 {
+  color: white;
+  text-align: center;
+  padding: 0 200px;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.animate-img {
+  position: relative;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: moveFromTop 1s ease-out forwards;
+}
+
+@keyframes moveFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fixed-content {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px;
+  z-index: 10;
+  color: grey;
+}
+
+.fixed {
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  width: 270px;
+}
+
+.fixed-map-data {
+  position: fixed;
+  top: 150px;
+  z-index: 10;
+}
+
+.fixed-img {
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  width: 570px;
+  right: 100px;
+}
+
+.footer {
+  .left-content {
+    strong {
+      color: grey;
+    }
+  }
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.references {
+  position: absolute;
+  bottom: 10px;
+}
+
+.page-2 {
+  .left-section {
+    p {
+      padding-left: 20px;
+      font-size: 18px;
+      color: rgb(171, 67, 161);
+    }
+  }
+}
+
+.page-4, .page-6, .page-8 {
+  .left-section {
+    p {
+      padding-left: 20px;
+      font-size: 16px;
+      color: rgb(61, 187, 164);
+    }
+  }
+}
+
+.bar-container {
+  display: flex;
+
+  span {
+    margin-right: 5px;
+    height: 20px;
+
+  }
+
+  .width-100 {
+    width: 40%;
+  }
+
+  .width-65 {
+    width: 32.5%;
+  }
+
+  .width-60 {
+    width: 30%;
+  }
+
+  .width-40 {
+    width: 20%;
+  }
+
+  .width-35 {
+    width: 17.5%;
+  }
+
+  .width-20 {
+    width: 10%;
+  }
+
+  .width-10 {
+    width: 5%;
+  }
+
+  .width-9 {
+    width: 4.5%;
+  }
+
+  .width-8 {
+    width: 4%;
+  }
+
+  .grey {
+    background-color: grey;
+  }
+
+  .pink {
+    background-color: pink;
+  }
+
+  .orange {
+    background-color: orange;
+  }
+
+  .cyan {
+    background-color: cyan;
+  }
+
+  .gold {
+    background-color: gold;
+  }
+}
