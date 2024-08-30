@@ -123,6 +123,12 @@
   width: 270px;
 }
 
+.fixed-map-data {
+  position: fixed;
+  top: 150px;
+  z-index: 10;
+}
+
 .fixed-img {
   position: fixed;
   top: 10px;
@@ -178,39 +184,39 @@
   }
 
   .width-100 {
-    width: 80%;
-  }
-
-  .width-65 {
-    width: 65%;
-  }
-
-  .width-60 {
-    width: 60%;
-  }
-
-  .width-40 {
     width: 40%;
   }
 
-  .width-35 {
-    width: 35%;
+  .width-65 {
+    width: 32.5%;
   }
 
-  .width-20 {
+  .width-60 {
+    width: 30%;
+  }
+
+  .width-40 {
     width: 20%;
   }
 
-  .width-10 {
+  .width-35 {
+    width: 17.5%;
+  }
+
+  .width-20 {
     width: 10%;
   }
 
+  .width-10 {
+    width: 5%;
+  }
+
   .width-9 {
-    width: 9%;
+    width: 4.5%;
   }
 
   .width-8 {
-    width: 8%;
+    width: 4%;
   }
 
   .grey {

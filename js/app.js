@@ -28,10 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.page-3 .footer').classList.add('fixed-content');
       }
       else if (step.id == 'step12' && direction == 'down') {
-        document.querySelector('.page-5 #step11 img').classList.remove('fixed-img');
-        document.querySelector('.page-5').classList.remove('extra-height');
         document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
+        document.querySelector('.page-5 #step10 .map-data').classList.remove('fixed-map-data');
       }
+      // else if (step.id == 'step12' && direction == 'down') {
+      //   //document.querySelector('.page-5 #step11 img').classList.remove('fixed-img');
+      //   //document.querySelector('.page-5').classList.remove('extra-height');
+      //   document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
+      // }
       else {
         document.querySelector('.page-1 .footer .right-content').classList.remove('fade-in');
         document.querySelector('.page-1 .footer .right-content').classList.add('fade-out');
@@ -42,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const direction = response.direction;
       if (step.id == 'step3' && direction == 'down') {
         document.querySelector('.page-1 .fixed-content').classList.remove('fixed-content');
+      }
+      else if (step.id == 'step12' && direction == 'up') {
+        document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
+        document.querySelector('.page-5 #step10 .map-data').classList.add('fixed-map-data');
       }
     });
 
@@ -70,17 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (step.id == 'step7' && direction == 'down') {
           document.querySelector('.page-4 #step7 .left-section').classList.add('fixed');
         }
+        else if (step.id == 'step9' && direction == 'up') {
+          document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
+          document.querySelector('.page-5 #step10 .map-data').classList.remove('fixed-map-data');
+        }
+        else if (step.id == 'step11' && direction == 'down') {
+          document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
+          document.querySelector('.page-5 #step10 .map-data').classList.add('fixed-map-data');
+        }
         else if (step.id == 'step12' && direction == 'down') {
           document.querySelector('.page-6 #step12 .left-section').classList.add('fixed');
         }
         else if (step.id == 'step15' && direction == 'down') {
           document.querySelector('.page-8 #step15 .left-section').classList.add('fixed');
         }
-        else if (step.id == 'step9' && direction == 'up') {
-          document.querySelector('.page-5 #step11 img.fixed-img').classList.remove('fixed-img');
-          document.querySelector('.page-5').classList.remove('extra-height');
-          document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
-        }
+        // else if (step.id == 'step9' && direction == 'up') {
+        //   //document.querySelector('.page-5 #step11 img.fixed-img').classList.remove('fixed-img');
+        //   //document.querySelector('.page-5').classList.remove('extra-height');
+        //   document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
+        // }
       })
       .onStepExit(response => {
         const step = response.element;
@@ -97,11 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (step.id == 'step15' && direction == 'up') {
           document.querySelector('.page-8 #step15 .left-section').classList.remove('fixed');
         }
-        else if (step.id == 'step9' && direction == 'down') {
-          document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
-          document.querySelector('.page-5').classList.add('extra-height');
-          document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
-        }
+        // else if (step.id == 'step9' && direction == 'down') {
+        //   //document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
+        //   //document.querySelector('.page-5').classList.add('extra-height');
+        //   document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
+        // }
       });
 
     const scroller_middle = scrollama();
@@ -173,10 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.page-9 #step16 h2').classList.add('fade-out');
             document.querySelector('.page-9 #step16 h2').classList.remove('fade-in');
           }
-          else if (step.id == 'step12' && direction == 'up') {
-            document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
-            document.querySelector('.page-5').classList.add('extra-height');
-            document.querySelector('.page-5 #step10 .map-data.hide').classList.remove('hide');
-          }
+          // else if (step.id == 'step12' && direction == 'up') {
+          //   //document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
+          //   //document.querySelector('.page-5').classList.add('extra-height');
+          //   document.querySelector('.page-5 #step10 .map-data.hide').classList.remove('hide');
+          // }
         });
 });
