@@ -21,6 +21,10 @@
   min-height: 120vh;
 }
 
+.extra-height {
+  min-height: 200vh;
+}
+
 .page-7, .page-9 {
   background-color: lightblue;
   min-height: 100vh;
@@ -98,6 +102,7 @@
   top: 10px;
   z-index: 10;
   width: 570px;
+  right: 100px;
 }
 
 .footer {

@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       else if (step.id == 'step12' && direction == 'down') {
         document.querySelector('.page-5 #step11 img').classList.remove('fixed-img');
+        document.querySelector('.page-5').classList.remove('extra-height');
         document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
       }
       else {
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if (step.id == 'step9' && direction == 'up') {
           document.querySelector('.page-5 #step11 img.fixed-img').classList.remove('fixed-img');
+          document.querySelector('.page-5').classList.remove('extra-height');
           document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
         }
       })
@@ -97,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if (step.id == 'step9' && direction == 'down') {
           document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
+          document.querySelector('.page-5').classList.add('extra-height');
           document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
         }
       });
@@ -152,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           else if (step.id == 'step12' && direction == 'up') {
             document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
+            document.querySelector('.page-5').classList.add('extra-height');
             document.querySelector('.page-5 #step10 .map-data.hide').classList.remove('hide');
           }
         });
