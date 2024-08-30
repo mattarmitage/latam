@@ -81,6 +81,28 @@
   }
 }
 
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.animate-img {
+  position: relative;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: moveFromTop 1s ease-out forwards;
+}
+
+@keyframes moveFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .fixed-content {
   position: fixed;
   bottom: 10px;

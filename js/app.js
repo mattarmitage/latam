@@ -119,6 +119,26 @@ document.addEventListener('DOMContentLoaded', () => {
           else if (step.id == 'step5') {
             document.querySelector('.page-3 .footer p').classList.remove('hide');
           }
+          else if (step.id == 'step13') {
+            document.querySelector('#step13 div:nth-child(3)').classList.remove('visibility-hidden');
+            document.querySelector('#step13 div:nth-child(3)').classList.add('animate-img');
+            setTimeout(function() {
+              document.querySelector('#step13 div:nth-child(2)').classList.remove('visibility-hidden');
+              document.querySelector('#step13 div:nth-child(2)').classList.add('animate-img');
+            }, 1000);
+            setTimeout(function() {
+              document.querySelector('#step13 div:nth-child(1)').classList.remove('visibility-hidden');
+              document.querySelector('#step13 div:nth-child(1)').classList.add('animate-img');
+            }, 2000);
+          }
+          else if (step.id == 'step15' || step.id == 'step12') {
+            document.querySelector('#step13 div:nth-child(1)').classList.add('visibility-hidden');
+            document.querySelector('#step13 div:nth-child(1)').classList.remove('animate-img');
+            document.querySelector('#step13 div:nth-child(2)').classList.add('visibility-hidden');
+            document.querySelector('#step13 div:nth-child(2)').classList.remove('animate-img');
+            document.querySelector('#step13 div:nth-child(3)').classList.add('visibility-hidden');
+            document.querySelector('#step13 div:nth-child(3)').classList.remove('animate-img');
+          }
           else if (step.id == 'step16') {
             document.querySelector('.page-9 #step16 h2').classList.remove('fade-out');
             document.querySelector('.page-9 #step16 h2').classList.add('fade-in');
