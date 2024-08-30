@@ -1,3 +1,7 @@
+.ref-page {
+  position: relative;
+  padding-bottom: 200px;
+}
 .page-1 {
   height: 100%;
   margin: 0;
@@ -140,7 +144,8 @@
 }
 
 .references {
-  padding-top: 200px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .page-2 {
