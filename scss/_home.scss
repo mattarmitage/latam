@@ -1,10 +1,31 @@
+.white-text {
+  color: white;
+}
 .ref-page {
   position: relative;
   padding-bottom: 200px;
 }
+.logo {
+  img {
+    max-width: 300px;
+  }
+  &.header-logo {
+    margin: 16px 0;
+  }
+}
+.middle-content {
+  position: relative;
+}
+.middle-content p {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .page-1 {
-  height: 100%;
-  margin: 0;
   background-image: url('../img/Rio.jpg') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -29,7 +50,8 @@
   min-height: 200vh;
 }
 
-.page-7, .page-9 {
+.page-7,
+.page-9 {
   background-color: lightblue;
   min-height: 100vh;
 
@@ -39,25 +61,28 @@
   }
 }
 
-#step1, #step2, #step3, #step5, #step6 {
+.full-height {
   min-height: 100vh;
   line-height: 50px;
-  font-size: 24px;
+  // font-size: 24px;
 }
 
 #step7 {
   min-height: 100vh;
 }
 
-#step1, .page-3 {
-  color: white;
-}
+// #step1,
+// .page-3 {
+//   color: white;
+// }
 
-#step2, #step3, #step6 {
-  color: white;
-  text-align: center;
-  padding: 0 200px;
-}
+// #step2,
+// #step3,
+// #step6 {
+//   color: white;
+//   text-align: center;
+//   padding: 0 200px;
+// }
 
 .fade-out {
   animation: fadeOut 0.5s forwards;
@@ -71,6 +96,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -80,6 +106,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -101,6 +128,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -164,7 +192,9 @@
   }
 }
 
-.page-4, .page-6, .page-8 {
+.page-4,
+.page-6,
+.page-8 {
   .left-section {
     p {
       padding-left: 20px;
