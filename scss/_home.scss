@@ -1,6 +1,15 @@
 .white-text {
   color: white;
 }
+.city {
+  &.fixed-content {
+    position: fixed;
+    width: 1200px;
+    left: 50%;
+    margin-left: -600px;
+    bottom: 0;
+  }
+}
 .small-text {
   font-size: 12px;
   padding-top: 16px;
@@ -18,6 +27,17 @@
 }
 .page-content-start {
   margin-top: 64px;
+}
+.side-icon-fixed {
+  text-align: left;
+  img {
+    max-width: 150px;
+  }
+}
+.footer-logos {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
 }
 .page-1 {
   background-image: url('../img/Rio.jpg') !important;
@@ -47,36 +67,16 @@
 .page-7,
 .page-9 {
   background-color: lightblue;
-  // min-height: 100vh;
-
   h2 {
     color: rgb(61, 187, 164);
-    font-size: 80px;
   }
 }
 
 .full-height {
   min-height: 100vh;
   line-height: 50px;
-  // font-size: 24px;
 }
 
-// #step7 {
-//   min-height: 100vh;
-// }
-
-// #step1,
-// .page-3 {
-//   color: white;
-// }
-
-// #step2,
-// #step3,
-// #step6 {
-//   color: white;
-//   text-align: center;
-//   padding: 0 200px;
-// }
 
 .fade-out {
   animation: fadeOut 0.5s forwards;
@@ -129,20 +129,10 @@
   }
 }
 
-.fixed-content {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  padding: 10px;
-  z-index: 10;
-  color: grey;
-}
-
 .fixed {
   position: fixed;
   top: 10px;
-  // z-index: 10;
-  // width: 270px;
+  z-index: -1;
 }
 
 .fixed-map-data {
@@ -159,19 +149,13 @@
   right: 100px;
 }
 
-.footer {
-  .left-content {
-    strong {
-      color: grey;
-    }
-  }
+.page-7 {
+  padding-bottom: 64px;
 }
 
 .page-2 {
-  .left-section {
+  .icon {
     p {
-      padding-left: 20px;
-      font-size: 18px;
       color: rgb(171, 67, 161);
     }
   }
@@ -180,10 +164,8 @@
 .page-4,
 .page-6,
 .page-8 {
-  .left-section {
+  .icon {
     p {
-      padding-left: 20px;
-      font-size: 16px;
       color: rgb(61, 187, 164);
     }
   }
