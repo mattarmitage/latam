@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           toggleClasses('.page-1 .footer .left-content p', [], ['hide']);
           toggleClasses('.page-1 .footer .right-content', [], ['hide']);
           break;
+        // For all white sections, add fixed class on exit.
         case 'step-2-1':
         case 'step-4-1':
         case 'step-6-1':
