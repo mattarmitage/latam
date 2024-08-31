@@ -1,210 +1,178 @@
 jQuery(document).foundation();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const scroller_bottom = scrollama();
+  // Utility function to toggle classes
+  const toggleClasses = (selector, addClasses = [], removeClasses = []) => {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    removeClasses.forEach(cls => element.classList.remove(cls));
+    addClasses.forEach(cls => element.classList.add(cls));
+  };
 
   // Setup scrollama instance
-  scroller_bottom
-    .setup({
-      step: '.scroller_bottom',
-      offset: 0.99,
-      //debug: true
-    })
-    .onStepEnter(response => {
-      const step = response.element;
-      const direction = response.direction;
-      if (step.id == 'step1' && step.hasEntered) {
-        document.querySelector('.page-1 .footer .right-content').classList.remove('fade-out');
-        document.querySelector('.page-1 .footer .right-content').classList.add('fade-in');
-      }
-      else if (step.id == 'step1' && !step.hasEntered) {
-        document.querySelector('.page-1 .footer .right-content').classList.remove('fade-out');
-        step.hasEntered = true;
-      }
-      else if (step.id == 'step3') {
-        document.querySelector('.page-1 .footer').classList.add('fixed-content');
-      }
-      else if (step.id == 'step6' && direction == 'up') {
-        document.querySelector('.page-3 .footer').classList.add('fixed-content');
-      }
-      else if (step.id == 'step12' && direction == 'down') {
-        document.querySelector('.page-5 #step11').classList.remove('fixed');
-        // document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
-        // document.querySelector('.page-5 #step10 .map-data').classList.remove('fixed-map-data');
-      }
-      // else if (step.id == 'step12' && direction == 'down') {
-      //   //document.querySelector('.page-5 #step11 img').classList.remove('fixed-img');
-      //   //document.querySelector('.page-5').classList.remove('extra-height');
-      //   document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
-      // }
-      else {
-        document.querySelector('.page-1 .footer .right-content').classList.remove('fade-in');
-        document.querySelector('.page-1 .footer .right-content').classList.add('fade-out');
-      }
-    })
-    .onStepExit(response => {
-      const step = response.element;
-      const direction = response.direction;
-      if (step.id == 'step3' && direction == 'down') {
-        document.querySelector('.page-1 .fixed-content').classList.remove('fixed-content');
-      }
-      else if (step.id == 'step12' && direction == 'up') {
-        // document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
-        // document.querySelector('.page-5 #step10 .map-data').classList.add('fixed-map-data');
-      }
-    });
+  const setupScrollama = (stepClass, offset, handlers) => {
+    const scroller = scrollama();
+    scroller
+      .setup({ step: stepClass, offset })
+      .onStepEnter(handlers.onStepEnter)
+      .onStepExit(handlers.onStepExit);
+  };
 
-    const scrollama_top = scrollama();
-    scrollama_top
-      .setup({
-        step: '.scrollama_top',
-        offset: 0.05
-      })
-      .onStepEnter(response => {
-        const step = response.element;
-        const direction = response.direction;
-        if (step.id == 'step1') {
-          document.querySelector('.page-1 .footer .left-content p').classList.remove('hide');
-          document.querySelector('.page-1 .footer .right-content').classList.remove('hide');
-        }
-        else if (step.id == 'step4' && direction == 'down') {
-          document.querySelector('.page-2 #step4 .left-section').classList.add('fixed');
-        }
-        else if (step.id == 'step4' && direction == 'down') {
-          document.querySelector('.page-3 .footer').classList.add('fixed-content');
-        }
-        else if (step.id == 'step6' && direction == 'down') {
-          document.querySelector('.page-3 .footer').classList.remove('fixed-content');
-        }
-        else if (step.id == 'step7' && direction == 'down') {
-          document.querySelector('.page-4 #step7 .left-section').classList.add('fixed');
-        }
-        else if (step.id == 'step10' && direction == 'down') {
-          document.querySelector('.page-5 #step11').classList.add('fixed');
-          // document.querySelector('.page-5 #step10 .map-data').classList.add('fixed-map-data');
-        }
-        else if (step.id == 'step12' && direction == 'down') {
-          document.querySelector('.page-6 #step12 .left-section').classList.add('fixed');
-        }
-        else if (step.id == 'step15' && direction == 'down') {
-          document.querySelector('.page-8 #step15 .left-section').classList.add('fixed');
-        }
-        // else if (step.id == 'step9' && direction == 'up') {
-        //   //document.querySelector('.page-5 #step11 img.fixed-img').classList.remove('fixed-img');
-        //   //document.querySelector('.page-5').classList.remove('extra-height');
-        //   document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
-        // }
-      })
-      .onStepExit(response => {
-        const step = response.element;
-        const direction = response.direction;
-        if (step.id == 'step4' && direction == 'up') {
-          document.querySelector('.page-2 #step4 .left-section').classList.remove('fixed');
-        }
-        else if (step.id == 'step7' && direction == 'up') {
-          document.querySelector('.page-4 #step7 .left-section').classList.remove('fixed');
-        }
-        else if (step.id == 'step12' && direction == 'up') {
-          document.querySelector('.page-6 #step12 .left-section').classList.remove('fixed');
-        }
-        else if (step.id == 'step15' && direction == 'up') {
-          document.querySelector('.page-8 #step15 .left-section').classList.remove('fixed');
-        }
-        // else if (step.id == 'step9' && direction == 'down') {
-        //   //document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
-        //   //document.querySelector('.page-5').classList.add('extra-height');
-        //   document.querySelector('.page-5 #step10 .map-data').classList.remove('hide');
-        // }
-      });
+  // Handlers for scroller_bottom
+  const scrollerBottomHandlers = {
+    onStepEnter: ({ element: step, direction }) => {
+      switch (step.id) {
+        case 'step-1-1':
+          if (step.hasEntered) {
+            toggleClasses('.page-1 .footer .right-content', ['fade-in'], ['fade-out']);
+          } else {
+            toggleClasses('.page-1 .footer .right-content', [], ['fade-out']);
+            step.hasEntered = true;
+          }
+          break;
+        case 'step-1-3':
+          toggleClasses('.page-1 .footer', ['fixed-content']);
+          break;
+        case 'step-3-2':
+          if (direction === 'up') toggleClasses('.page-3 .footer', ['fixed-content']);
+          break;
+        case 'step-6-1':
+          if (direction === 'down') toggleClasses('.page-5 #step-5-4', [], ['fixed']);
+          break;
+        default:
+          toggleClasses('.page-1 .footer .right-content', ['fade-out'], ['fade-in']);
+          break;
+      }
+    },
+    onStepExit: ({ element: step, direction }) => {
+      switch (step.id) {
+        case 'step-1-3':
+          if (direction === 'down') toggleClasses('.page-1 .fixed-content', [], ['fixed-content']);
+          break;
+        case 'step-6-1':
+          if (direction === 'up') {
+            // Example for handling specific steps on exit if needed
+          }
+          break;
+        // Additional cases can be added as needed
+      }
+    }
+  };
 
-    const scroller_middle = scrollama();
-    scroller_middle
-        .setup({
-          step: '.scroller_middle',
-          offset: 0.5
-        })
-        .onStepEnter(response => {
-          const step = response.element;
-          const direction = response.direction;
-          if (step.id == 'step4') {
-            document.querySelector('.page-3 .footer p').classList.add('hide');
+  // Handlers for scrollama_top
+  const scrollerTopHandlers = {
+    onStepEnter: ({ element: step, direction }) => {
+      switch (step.id) {
+        case 'step-1-1':
+          toggleClasses('.page-1 .footer .left-content p', [], ['hide']);
+          toggleClasses('.page-1 .footer .right-content', [], ['hide']);
+          break;
+        case 'step-2-1':
+        case 'step-4-1':
+        case 'step-6-1':
+        case 'step-8-1': {
+          if (direction === 'down') {
+            const pageNumber = step.id.split('-')[1];
+            const selector = `.page-${pageNumber} #${step.id} .left-section`;
+            toggleClasses(selector, ['fixed']);
           }
-          else if (step.id == 'step5') {
-            document.querySelector('.page-3 .footer p').classList.remove('hide');
+          break;
+        }
+        case 'step-3-2':
+          if (direction === 'down') toggleClasses('.page-3 .footer', [], ['fixed-content']);
+          break;
+        case 'step-5-3':
+          if (direction === 'down') toggleClasses('.page-5 #step-5-4', ['fixed']);
+          break;
+      }
+    },
+    onStepExit: ({ element: step, direction }) => {
+      switch (step.id) {
+        // For all white sections, remove fixed class on exit.
+        case 'step-2-1':
+        case 'step-4-1':
+        case 'step-6-1':
+        case 'step-8-1': {
+          if (direction === 'down') {
+            const pageNumber = step.id.split('-')[1];
+            const selector = `.page-${pageNumber} #${step.id} .left-section`;
+            toggleClasses(selector, [], ['fixed']);
           }
-          else if (step.id == 'step13') {
-            document.querySelector('#step13 div:nth-child(3)').classList.remove('visibility-hidden');
-            document.querySelector('#step13 div:nth-child(3)').classList.add('animate-img');
-            setTimeout(function() {
-              document.querySelector('#step13 div:nth-child(2)').classList.remove('visibility-hidden');
-              document.querySelector('#step13 div:nth-child(2)').classList.add('animate-img');
-            }, 1000);
-            setTimeout(function() {
-              document.querySelector('#step13 div:nth-child(1)').classList.remove('visibility-hidden');
-              document.querySelector('#step13 div:nth-child(1)').classList.add('animate-img');
-            }, 2000);
-          }
-          else if (step.id == 'step15' || step.id == 'step12') {
-            document.querySelector('#step13 div:nth-child(1)').classList.add('visibility-hidden');
-            document.querySelector('#step13 div:nth-child(1)').classList.remove('animate-img');
-            document.querySelector('#step13 div:nth-child(2)').classList.add('visibility-hidden');
-            document.querySelector('#step13 div:nth-child(2)').classList.remove('animate-img');
-            document.querySelector('#step13 div:nth-child(3)').classList.add('visibility-hidden');
-            document.querySelector('#step13 div:nth-child(3)').classList.remove('animate-img');
-          }
-          else if (step.id == 'step16') {
-            document.querySelector('.page-9 #step16 h2').classList.remove('fade-out');
-            document.querySelector('.page-9 #step16 h2').classList.add('fade-in');
-          }
-        })
-        .onStepExit(response => {
-          const step = response.element;
-          const direction = response.direction;
-          if (step.id == 'step4' && direction == 'down') {
-            document.querySelector('.page-2 #step4 .left-section').classList.remove('fixed');
-          }
-          else if (step.id == 'step7' && direction == 'down') {
-            document.querySelector('.page-4 #step7 .left-section').classList.remove('fixed');
-          }
-          else if (step.id == 'step12' && direction == 'down') {
-            document.querySelector('.page-6 #step12 .left-section').classList.remove('fixed');
-          }
-          else if (step.id == 'step15' && direction == 'down') {
-            document.querySelector('.page-8 #step15 .left-section').classList.remove('fixed');
-          }
-          else if (step.id == 'step5' && direction == 'up') {
-            document.querySelector('.page-2 #step4 .left-section').classList.add('fixed');
-          }
-          else if (step.id == 'step8' && direction == 'up') {
-            document.querySelector('.page-4 #step7 .left-section').classList.add('fixed');
-          }
-          else if (step.id == 'step13' && direction == 'up') {
-            document.querySelector('.page-6 #step12 .left-section').classList.add('fixed');
-          }
-          else if (step.id == 'step16' && direction == 'up') {
-            document.querySelector('.page-8 #step15 .left-section').classList.add('fixed');
-            document.querySelector('.page-9 #step16 h2').classList.add('fade-out');
-            document.querySelector('.page-9 #step16 h2').classList.remove('fade-in');
-          }
-          // else if (step.id == 'step12' && direction == 'up') {
-          //   //document.querySelector('.page-5 #step11 img').classList.add('fixed-img');
-          //   //document.querySelector('.page-5').classList.add('extra-height');
-          //   document.querySelector('.page-5 #step10 .map-data.hide').classList.remove('hide');
-          // }
-        });
+          break;
+        }
+      }
+    }
+  };
 
-    const scroller_map = scrollama();
-    scroller_map
-        .setup({
-          step: '.scroller_map',
-          offset: 0.15
-        })
-        .onStepEnter(response => {
-          const step = response.element;
-          const direction = response.direction;
-          if (step.id == 'step9' && direction == 'up') {
-            // document.querySelector('.page-5 #step10 .map-data').classList.add('hide');
-            // document.querySelector('.page-5 #step10 .map-data').classList.remove('fixed-map-data');
+  // Handlers for scroller_middle
+  const scrollerMiddleHandlers = {
+    onStepEnter: ({ element: step, direction }) => {
+      switch (step.id) {
+        case 'step-2-1':
+          toggleClasses('.page-3 .footer p', ['hide']);
+          break;
+        case 'step-3-1':
+          toggleClasses('.page-3 .footer p', [], ['hide']);
+          break;
+        case 'step-7-1':
+          toggleClasses('#step-7-1 div:nth-child(3)', ['animate-img'], ['visibility-hidden']);
+          setTimeout(() => {
+            toggleClasses('#step-7-1 div:nth-child(2)', ['animate-img'], ['visibility-hidden']);
+          }, 1000);
+          setTimeout(() => {
+            toggleClasses('#step-7-1 div:nth-child(1)', ['animate-img'], ['visibility-hidden']);
+          }, 2000);
+          break;
+        case 'step-8-1':
+        case 'step-6-1':
+          toggleClasses('#step-7-1 div:nth-child(1)', ['visibility-hidden'], ['animate-img']);
+          toggleClasses('#step-7-1 div:nth-child(2)', ['visibility-hidden'], ['animate-img']);
+          toggleClasses('#step-7-1 div:nth-child(3)', ['visibility-hidden'], ['animate-img']);
+          break;
+        case 'step-9-1':
+          toggleClasses('.page-9 #step-9-1 h2', ['fade-in'], ['fade-out']);
+          break;
+        // Additional cases can be added as needed
+      }
+    },
+    onStepExit: ({ element: step, direction }) => {
+      switch (step.id) {
+        // For all white sections, remove fixed class on exit.
+        case 'step-2-1':
+        case 'step-4-1':
+        case 'step-6-1':
+        case 'step-8-1': {
+          if (direction === 'down') {
+            const pageNumber = step.id.split('-')[1];
+            const selector = `.page-${pageNumber} #${step.id} .left-section`;
+            toggleClasses(selector, [], ['fixed']);
           }
-        })
+          break;
+        }
+        case 'step-9-1':
+          if (direction === 'up') {
+            toggleClasses('.page-8 #step-8-1 .left-section', ['fixed']);
+            toggleClasses('.page-9 #step-9-1 h2', ['fade-out'], ['fade-in']);
+          }
+          break;
+        // Additional cases can be added as needed
+      }
+    }
+  };
+
+  // Initialize scrollers
+  setupScrollama('.scroller_bottom', 0.99, scrollerBottomHandlers);
+  setupScrollama('.scrollama_top', 0.05, scrollerTopHandlers);
+  setupScrollama('.scroller_middle', 0.5, scrollerMiddleHandlers);
+  setupScrollama('.scroller_map', 0.15, {
+    onStepEnter: ({ element: step, direction }) => {
+      if (step.id === 'step-5-2' && direction === 'up') {
+        // Specific logic for scroller_map step 9 when scrolling up
+      }
+    },
+    onStepExit: ({ element: step, direction }) => {
+      // Handle exit logic for scroller_map if needed
+    }
+  });
 });
