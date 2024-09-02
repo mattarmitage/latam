@@ -25,7 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
       switch (step.id) {
         // Handlers for footer logos.
         case 'step-1-first':
-          toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
+          if (step.hasEntered) {
+            toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
+          } else {
+            toggleClasses('.page-1 .footer-logos', [], ['fade-out']);
+            step.hasEntered = true;
+          }
           break;
         // Handlers for city names.
         case 'step-1-last':
