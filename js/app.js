@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollerBottomHandlers = {
     onStepEnter: ({ element: step, direction }) => {
       switch (step.id) {
+        // Handlers for footer logos.
+        case 'step-1-first':
+          toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
+          break;
         // Handlers for city names.
         case 'step-1-last':
         case 'step-3-last': {
           // Extract the step number.
           const pageNumber = step.id.split('-')[1];
-
-          if (step.id === 'step-1-last') {
-            toggleClasses('.page-1 .footer', ['fixed-content']);
-          }
 
           if (direction === 'up') {
             toggleClasses(`.page-${pageNumber} .city`, ['fixed-content'], []);
@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     onStepExit: ({ element: step, direction }) => {
       switch (step.id) {
+        // Handlers for footer logos.
+        case 'step-1-first':
+          toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
+          break;
         // Handlers for city names.
         case 'step-1-last':
         case 'step-3-last': {
@@ -70,11 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollerTopHandlers = {
     onStepEnter: ({ element: step, direction }) => {
       switch (step.id) {
-        case 'step-1-first':
-          if (direction === 'down') {
-            toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
-          }
-          break;
         // For all white sections, add fixed class on exit.
         case 'step-2-1':
         case 'step-4-1':
@@ -102,11 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
           toggleClasses(selector, [], ['fixed']);
           break;
         }
-        case 'step-1-first':
-          if (direction === 'up') {
-            toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
-          }
-          break;
       }
     }
   };
