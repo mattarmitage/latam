@@ -23,21 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollerBottomHandlers = {
     onStepEnter: ({ element: step, direction }) => {
       switch (step.id) {
-        // Handlers for footer logos.
-        case 'step-1-first':
-          toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
-          break;
-        default:
+        case 'step-1-2':
+          toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
           break;
       }
     },
     onStepExit: ({ element: step, direction }) => {
       switch (step.id) {
-        // Handlers for footer logos.
-        case 'step-1-first':
-          toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
-          break;
-        default:
+        case 'step-1-2':
+          toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
           break;
       }
     }
@@ -99,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Initialize scrollers
-  setupScrollama('.scroller_bottom', 1, scrollerBottomHandlers);
+  setupScrollama('.scroller_bottom', 0.99, scrollerBottomHandlers);
   setupScrollama('.scrollama_top', 0, scrollerTopHandlers);
   setupScrollama('.scroller_middle', 0.5, scrollerMiddleHandlers);
 });

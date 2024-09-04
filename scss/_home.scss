@@ -31,23 +31,17 @@
   }
 }
 
-.page-content-start {
+.page-content-start sticky {
   margin-top: 64px;
 }
 
 .side-icon-fixed {
   text-align: left;
 
-  img {
+  .sticky img {
     max-width: 150px;
   }
 }
-
-// .footer-logos.fixed {
-//   position: fixed;
-//   bottom: 10px;
-//   right: 0;
-// }
 
 .page-1 {
   background-image: url('../img/Rio.jpg') !important;
@@ -75,20 +69,16 @@
 }
 
 .page-5 {
-  background-color: lightblue;
-  min-height: 120vh;
+  background-color: #cfeee8;
 }
-
-.extra-height {
-  min-height: 200vh;
+.page-7 {
+  background-color: #6dccbb;
 }
-
-.page-7,
 .page-9 {
-  background-color: lightblue;
-
+  background-color: #d8f1ed;
   h2 {
-    color: rgb(61, 187, 164);
+    color: #3dbba4;
+    font-size: 64px;
   }
 }
 
@@ -158,6 +148,7 @@
 .map-data {
   padding-top: 64px;
 }
+
 .fixed-map-data {
   position: fixed;
   top: 150px;
