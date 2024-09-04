@@ -25,18 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
       switch (step.id) {
         // Handlers for footer logos.
         case 'step-1-first':
-          if (step.hasEntered) {
-            toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
-          } else {
-            toggleClasses('.page-1 .footer-logos', [], ['fade-out']);
-            step.hasEntered = true;
-          }
+          toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
           break;
-
-        case 'step-6-1':
-          toggleClasses('.page-5 #step-5-4', [], ['fixed']);
-          break;
-
         default:
           break;
       }
@@ -47,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-1-first':
           toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
           break;
-
         default:
           break;
       }
@@ -58,9 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollerTopHandlers = {
     onStepEnter: ({ element: step, direction }) => {
       switch (step.id) {
-        case 'step-5-3':
-          if (direction === 'down') toggleClasses('.page-5 #step-5-4', ['fixed']);
-          break;
       }
     },
     onStepExit: ({ element: step, direction }) => {
@@ -91,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-9-1':
           toggleClasses('.page-9 #step-9-1 h2', ['fade-in'], ['fade-out']);
           break;
+        // Handlers for map data.
+        case 'step-5-2':
+          toggleClasses('#step-5-2 .map-data', ['fade-in'], ['fade-out']);
+          break;
       }
     },
     onStepExit: ({ element: step, direction }) => {
@@ -99,6 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
           if (direction === 'up') {
             toggleClasses('.page-9 #step-9-1 h2', ['fade-out'], ['fade-in']);
           }
+          break;
+        // Handlers for map data.
+        case 'step-5-2':
+          toggleClasses('#step-5-2 .map-data', ['fade-out'], ['fade-in']);
           break;
       }
     }

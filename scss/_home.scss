@@ -23,7 +23,7 @@
 
 .logo {
   img {
-    max-width: 300px;
+    width: 300px;
   }
 
   &.header-logo {
@@ -43,11 +43,11 @@
   }
 }
 
-.footer-logos {
-  position: fixed;
-  bottom: 10px;
-  right: 0;
-}
+// .footer-logos.fixed {
+//   position: fixed;
+//   bottom: 10px;
+//   right: 0;
+// }
 
 .page-1 {
   background-image: url('../img/Rio.jpg') !important;
@@ -103,7 +103,7 @@
 }
 
 .fade-in {
-  animation: fadeIn 0.5s forwards;
+  animation: fadeIn 3s forwards;
 }
 
 @keyframes fadeOut {
@@ -155,6 +155,9 @@
   z-index: -1;
 }
 
+.map-data {
+  padding-top: 64px;
+}
 .fixed-map-data {
   position: fixed;
   top: 150px;
