@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-1-2':
           toggleClasses('.page-1 .footer-logos', ['fade-out'], ['fade-in']);
           break;
+
       }
     },
     onStepExit: ({ element: step, direction }) => {
@@ -33,6 +34,54 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-1-2':
           toggleClasses('.page-1 .footer-logos', ['fade-in'], ['fade-out']);
           break;
+
+        // Large green text.
+        case 'step-9-1':
+          if (direction === 'up') {
+            toggleClasses('.page-9 #step-9-1 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Handlers for map data.
+        case 'step-5-2':
+          if (direction === 'up') {
+            toggleClasses('#step-5-2 .map-data', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Oil Barret.
+        case 'step-7-1':
+          if (direction === 'up') {
+            toggleClasses('#step-7-1 div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-7-1 div:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-7-1 div:nth-child(3)', ['invisible'], ['slide-down']);
+          }
+          break;
+
+        // Chart with arrow.
+        case 'step-12-2':
+          if (direction === 'up') {
+            setTimeout(() => {
+              toggleClasses('#step-12-2 div:nth-child(2)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-12-2 div:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 1000);
+          }
+          break;
+
+        // Globe.
+        case 'step-16-2':
+          if (direction === 'up') {
+            setTimeout(() => {
+              toggleClasses('#step-16-2 div:nth-child(2)', ['invisible'], ['slide-up']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-16-2 div:nth-child(1)', ['invisible'], ['slide-down']);
+            }, 1000);
+          }
+          break;
+
       }
     }
   };
@@ -45,6 +94,54 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     onStepExit: ({ element: step, direction }) => {
       switch (step.id) {
+
+        // Large green text.
+        case 'step-9-1':
+          if (direction === 'down') {
+            toggleClasses('.page-9 #step-9-1 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Handlers for map data.
+        case 'step-5-2':
+          if (direction === 'down') {
+            toggleClasses('#step-5-2 .map-data', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Oil Barret.
+        case 'step-7-1':
+          if (direction === 'down') {
+            toggleClasses('#step-7-1 div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-7-1 div:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-7-1 div:nth-child(3)', ['invisible'], ['slide-down']);
+          }
+          break;
+
+        // Chart with arrow.
+        case 'step-12-2':
+          if (direction === 'down') {
+            setTimeout(() => {
+              toggleClasses('#step-12-2 div:nth-child(2)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-12-2 div:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 1000);
+          }
+          break;
+
+        // Globe.
+        case 'step-16-2':
+          if (direction === 'down') {
+            setTimeout(() => {
+              toggleClasses('#step-16-2 div:nth-child(2)', ['invisible'], ['slide-up']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-16-2 div:nth-child(1)', ['invisible'], ['slide-down']);
+            }, 1000);
+          }
+          break;
+
       }
     }
   };
@@ -53,41 +150,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollerMiddleHandlers = {
     onStepEnter: ({ element: step, direction }) => {
       switch (step.id) {
-        case 'step-7-1':
-          toggleClasses('#step-7-1 div:nth-child(3)', ['animate-img'], ['visibility-hidden']);
-          setTimeout(() => {
-            toggleClasses('#step-7-1 div:nth-child(2)', ['animate-img'], ['visibility-hidden']);
-          }, 200);
-          setTimeout(() => {
-            toggleClasses('#step-7-1 div:nth-child(1)', ['animate-img'], ['visibility-hidden']);
-          }, 500);
-          break;
-        case 'step-8-1':
-        case 'step-6-1':
-          toggleClasses('#step-7-1 div:nth-child(1)', ['visibility-hidden'], ['animate-img']);
-          toggleClasses('#step-7-1 div:nth-child(2)', ['visibility-hidden'], ['animate-img']);
-          toggleClasses('#step-7-1 div:nth-child(3)', ['visibility-hidden'], ['animate-img']);
-          break;
+
+        // Large green text.
         case 'step-9-1':
-          toggleClasses('.page-9 #step-9-1 h2', ['fade-in'], ['fade-out']);
+          toggleClasses('.page-9 #step-9-1 h2', ['fade-in'], ['invisible']);
           break;
+
+        // Oil Barret.
+        case 'step-7-1':
+          toggleClasses('#step-7-1 div:nth-child(3)', ['slide-down'], ['invisible']);
+          setTimeout(() => {
+            toggleClasses('#step-7-1 div:nth-child(2)', ['slide-down'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-7-1 div:nth-child(1)', ['slide-down'], ['invisible']);
+          }, 1000);
+          break;
+
+        // Chart with arrow.
+        case 'step-12-2':
+          setTimeout(() => {
+            toggleClasses('#step-12-2 div:nth-child(2)', ['fade-in'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-12-2 div:nth-child(1)', ['fade-in'], ['invisible']);
+          }, 1000);
+          break;
+
+        // Globe.
+        case 'step-16-2':
+          setTimeout(() => {
+            toggleClasses('#step-16-2 div:nth-child(2)', ['slide-up'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-16-2 div:nth-child(1)', ['slide-down'], ['invisible']);
+          }, 1000);
+          break;
+
         // Handlers for map data.
         case 'step-5-2':
-          toggleClasses('#step-5-2 .map-data', ['fade-in'], ['fade-out']);
+          toggleClasses('#step-5-2 .map-data', ['fade-in'], ['invisible']);
           break;
+
       }
     },
     onStepExit: ({ element: step, direction }) => {
       switch (step.id) {
-        case 'step-9-1':
-          if (direction === 'up') {
-            toggleClasses('.page-9 #step-9-1 h2', ['fade-out'], ['fade-in']);
-          }
-          break;
-        // Handlers for map data.
-        case 'step-5-2':
-          toggleClasses('#step-5-2 .map-data', ['fade-out'], ['fade-in']);
-          break;
       }
     }
   };
