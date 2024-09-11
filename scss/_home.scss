@@ -62,6 +62,18 @@
   background-image: url('../img/cartagena.jpg') !important;
 }
 
+.page-19 {
+  background-image: url('../img/mexico-city.jpg') !important;
+}
+
+.page-23 {
+  background-image: url('../img/san-paulo.jpg') !important;
+}
+
+.page-31 {
+  background-image: url('../img/la-paz.jpg') !important;
+}
+
 .page-5 {
   background-color: #cfeee8;
 }
@@ -83,15 +95,54 @@
   background-color: #d2d5db;
 }
 
-.page-16 {
+.page-16,
+.page-18 {
   background-color: #f9e0cc;
+}
+
+.page-22 {
+  background-color: #eddeeb;
+}
+
+.page-25,
+.page-29 {
+  background-color: #e9e0d1;
+}
+
+.page-27 {
+  background-color: #a68446;
+}
+
+.page-33 {
+  background-color: rgb(171, 67, 161);
+  color: #fff;
+}
+
+.page-17 {
+  h2 {
+    color: #f87d08;
+    font-size: 64px;
+  }
+}
+
+.page-21 {
+  h2 {
+    color: #c078b3;
+    font-size: 64px;
+  }
+}
+
+.page-29 {
+  h2 {
+    color: #a68446;
+    font-size: 64px;
+  }
 }
 
 .full-height {
   min-height: 100vh;
   line-height: 50px;
 }
-
 
 .fade-out {
   animation: fadeOut 0.5s forwards;
@@ -104,13 +155,19 @@
 .slide-up {
   animation-name: slideUp;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 .slide-down {
   animation-name: slideDown;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
+}
+
+.slide-right {
+  animation-name: slideRight;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 }
 
 @keyframes fadeOut {
@@ -159,6 +216,20 @@
   }
 }
 
+@keyframes slideRight {
+
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .fixed {
   position: fixed;
   top: 10px;
@@ -169,25 +240,16 @@
   padding-top: 64px;
 }
 
-.fixed-map-data {
-  position: fixed;
-  top: 150px;
-  z-index: 10;
-}
-
-.fixed-img {
-  position: fixed;
-  top: 10px;
-  z-index: 10;
-  width: 570px;
-  right: 100px;
+.text-padding {
+  padding-top: 30px;
 }
 
 .page-7 {
   padding-bottom: 64px;
 }
 
-.page-2 {
+.page-2,
+.page-32 {
   .icon {
     p {
       color: rgb(171, 67, 161);
@@ -201,6 +263,42 @@
   .icon {
     p {
       color: rgb(61, 187, 164);
+    }
+  }
+}
+
+.page-11,
+.page-13 {
+  .icon {
+    p {
+      color: #4a596d;
+    }
+  }
+}
+
+.page-15,
+.page-18 {
+  .icon {
+    p {
+      color: #f87d08;
+    }
+  }
+}
+
+.page-20 {
+  .icon {
+    p {
+      color: #c078b3;
+    }
+  }
+}
+
+.page-26,
+.page-28,
+.page-30 {
+  .icon {
+    p {
+      color: #a68446;
     }
   }
 }
