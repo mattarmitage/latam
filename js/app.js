@@ -58,6 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           break;
 
+        // Oil Barret text.
+        case 'step-7-2':
+          if (direction === 'up') {
+            toggleClasses('#step-7-2 > div', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Drops.
+        case 'step-10-last':
+          if (direction === 'up') {
+            toggleClasses('#step-10-last img:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last img:nth-child(2)', ['invisible'], ['slide-down']);
+          }
+          break;
+
         // Chart with arrow.
         case 'step-12-2':
           if (direction === 'up') {
@@ -82,6 +97,69 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           break;
 
+        // Large orange text.
+        case 'step-17-2':
+          if (direction === 'up') {
+            toggleClasses('.page-17 #step-17-2 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Large pink text.
+        case 'step-21-1':
+          if (direction === 'up') {
+            toggleClasses('.page-21 #step-21-1 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Hydroelectric.
+        case 'step-22-2':
+          if (direction === 'up') {
+            setTimeout(() => {
+              toggleClasses('#step-22-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-22-2 img:nth-child(2)', ['invisible'], ['slide-right']);
+            }, 1000);
+          }
+          break;
+
+        // Batteries.
+        case 'step-24-2':
+          if (direction === 'up') {
+            setTimeout(() => {
+              toggleClasses('#step-24-2 img:nth-child(1)', ['invisible'], ['slide-up']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-24-2 img:nth-child(2)', ['invisible'], ['slide-down']);
+            }, 1000);
+          }
+          break;
+
+        // Money bad.
+        case 'step-27-2':
+          if (direction === 'up') {
+            setTimeout(() => {
+              toggleClasses('#step-27-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-27-2 img:nth-child(2)', ['invisible'], ['fade-in']);
+            }, 1000);
+          }
+          break;
+
+        // Large brown text.
+        case 'step-29-2':
+          if (direction === 'up') {
+            toggleClasses('.page-29 #step-29-2 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Bottom logos.
+        case 'step-33-2':
+          if (direction === 'up') {
+            toggleClasses('.page-33 #step-33-2 .footer-logos', ['invisible'], ['fade-in']);
+          }
+          break;
       }
     }
   };
@@ -118,6 +196,21 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           break;
 
+        // Oil Barret text.
+        case 'step-7-2':
+          if (direction === 'down') {
+            toggleClasses('#step-7-2 > div', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Drops.
+        case 'step-10-last':
+          if (direction === 'down') {
+            toggleClasses('#step-10-last img:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last img:nth-child(2)', ['invisible'], ['slide-down']);
+          }
+          break;
+
         // Chart with arrow.
         case 'step-12-2':
           if (direction === 'down') {
@@ -142,6 +235,69 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           break;
 
+        // Large orange text.
+        case 'step-17-2':
+          if (direction === 'down') {
+            toggleClasses('.page-17 #step-17-2 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Large pink text.
+        case 'step-21-1':
+          if (direction === 'down') {
+            toggleClasses('.page-21 #step-21-1 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Hydroelectric.
+        case 'step-22-2':
+          if (direction === 'down') {
+            setTimeout(() => {
+              toggleClasses('#step-22-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-22-2 img:nth-child(2)', ['invisible'], ['slide-right']);
+            }, 1000);
+          }
+          break;
+
+        // Batteries.
+        case 'step-24-2':
+          if (direction === 'down') {
+            setTimeout(() => {
+              toggleClasses('#step-24-2 img:nth-child(1)', ['invisible'], ['slide-up']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-24-2 img:nth-child(2)', ['invisible'], ['slide-down']);
+            }, 1000);
+          }
+          break;
+
+        // Money bag.
+        case 'step-27-2':
+          if (direction === 'down') {
+            setTimeout(() => {
+              toggleClasses('#step-27-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+            }, 500);
+            setTimeout(() => {
+              toggleClasses('#step-27-2 img:nth-child(2)', ['invisible'], ['fade-in']);
+            }, 1000);
+          }
+          break;
+
+        // Large brown text.
+        case 'step-29-2':
+          if (direction === 'down') {
+            toggleClasses('.page-29 #step-29-2 h2', ['invisible'], ['fade-in']);
+          }
+          break;
+
+        // Bottom logos.
+        case 'step-33-2':
+          if (direction === 'down') {
+            toggleClasses('.page-33 #step-33-2 .footer-logos', ['invisible'], ['fade-in']);
+          }
+          break;
       }
     }
   };
@@ -165,6 +321,22 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             toggleClasses('#step-7-1 div:nth-child(1)', ['slide-down'], ['invisible']);
           }, 1000);
+          setTimeout(() => {
+            toggleClasses('#step-7-2 > div', ['fade-in'], ['invisible']);
+          }, 1500);
+          break;
+
+        // Oil Barret text.
+        // case 'step-7-2':
+        //   toggleClasses('#step-7-2 > div', ['fade-in'], ['invisible']);
+        //   break;
+
+        // Drops.
+        case 'step-10-last':
+          if (direction === 'down') {
+            toggleClasses('#step-10-last img:nth-child(1)', ['slide-down'], ['invisible']);
+            toggleClasses('#step-10-last img:nth-child(2)', ['slide-down'], ['invisible']);
+          }
           break;
 
         // Chart with arrow.
@@ -190,6 +362,56 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handlers for map data.
         case 'step-5-2':
           toggleClasses('#step-5-2 .map-data', ['fade-in'], ['invisible']);
+          break;
+
+        // Large orange text.
+        case 'step-17-2':
+          toggleClasses('.page-17 #step-17-2 h2', ['fade-in'], ['invisible']);
+          break;
+
+        // Large pink text.
+        case 'step-21-1':
+          toggleClasses('.page-21 #step-21-1 h2', ['fade-in'], ['invisible']);
+          break;
+
+        // Hydroelectric.
+        case 'step-22-2':
+          setTimeout(() => {
+            toggleClasses('#step-22-2 img:nth-child(1)', ['fade-in'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-22-2 img:nth-child(2)', ['slide-right'], ['invisible']);
+          }, 1000);
+          break;
+
+        // Batteries.
+        case 'step-24-2':
+          setTimeout(() => {
+            toggleClasses('#step-24-2 img:nth-child(1)', ['slide-up'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-24-2 img:nth-child(2)', ['slide-down'], ['invisible']);
+          }, 1000);
+          break;
+
+        // Money bag.
+        case 'step-27-2':
+          setTimeout(() => {
+            toggleClasses('#step-27-2 img:nth-child(1)', ['fade-in'], ['invisible']);
+          }, 500);
+          setTimeout(() => {
+            toggleClasses('#step-27-2 img:nth-child(2)', ['fade-in'], ['invisible']);
+          }, 1000);
+          break;
+
+        // Large brown text.
+        case 'step-29-2':
+          toggleClasses('.page-29 #step-29-2 h2', ['fade-in'], ['invisible']);
+          break;
+
+        // Bottom logos.
+        case 'step-33-1':
+          toggleClasses('.page-33 #step-33-2 .footer-logos', ['fade-in'], ['invisible']);
           break;
 
       }
