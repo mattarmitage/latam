@@ -192,7 +192,7 @@
 
 @keyframes slideUp {
 
-  0%{
+  0% {
     transform: translateY(100%);
     opacity: 0;
   }
@@ -373,5 +373,19 @@
   .top {
     position: absolute;
     left: calc(50% - 150px);
+  }
+}
+
+.split-drops {
+  .left {
+    position: absolute;
+    left: calc(50% - 150px);
+  }
+}
+
+.money-bag {
+  .left {
+    position: absolute;
+    left: calc(50% - 200px);
   }
 }

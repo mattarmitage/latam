@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         // Drops.
-        case 'step-10-last':
+        case 'step-10-3':
           if (direction === 'up') {
-            toggleClasses('#step-10-last img:nth-child(1)', ['invisible'], ['slide-down']);
-            toggleClasses('#step-10-last img:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-3 div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-3 div:nth-child(2)', ['invisible'], ['slide-down']);
           }
           break;
 
@@ -139,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-27-2':
           if (direction === 'up') {
             setTimeout(() => {
-              toggleClasses('#step-27-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+              toggleClasses('#step-27-2 div:nth-child(1)', ['invisible'], ['fade-in']);
             }, 500);
             setTimeout(() => {
-              toggleClasses('#step-27-2 img:nth-child(2)', ['invisible'], ['fade-in']);
+              toggleClasses('#step-27-2 div:nth-child(2)', ['invisible'], ['fade-in']);
             }, 1000);
           }
           break;
@@ -204,10 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         // Drops.
-        case 'step-10-last':
+        case 'step-10-3':
           if (direction === 'down') {
-            toggleClasses('#step-10-last img:nth-child(1)', ['invisible'], ['slide-down']);
-            toggleClasses('#step-10-last img:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-3 div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-3 div:nth-child(2)', ['invisible'], ['slide-down']);
           }
           break;
 
@@ -277,10 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'step-27-2':
           if (direction === 'down') {
             setTimeout(() => {
-              toggleClasses('#step-27-2 img:nth-child(1)', ['invisible'], ['fade-in']);
+              toggleClasses('#step-27-2 div:nth-child(1)', ['invisible'], ['fade-in']);
             }, 500);
             setTimeout(() => {
-              toggleClasses('#step-27-2 img:nth-child(2)', ['invisible'], ['fade-in']);
+              toggleClasses('#step-27-2 div:nth-child(2)', ['invisible'], ['fade-in']);
             }, 1000);
           }
           break;
@@ -332,11 +332,11 @@ document.addEventListener('DOMContentLoaded', () => {
         //   break;
 
         // Drops.
-        case 'step-10-last':
-          if (direction === 'down') {
-            toggleClasses('#step-10-last img:nth-child(1)', ['slide-down'], ['invisible']);
-            toggleClasses('#step-10-last img:nth-child(2)', ['slide-down'], ['invisible']);
-          }
+        case 'step-10-3':
+          // if (direction === 'down') {
+            toggleClasses('#step-10-3 div:nth-child(1)', ['slide-down'], ['invisible']);
+            toggleClasses('#step-10-3 div:nth-child(2)', ['slide-down'], ['invisible']);
+          // }
           break;
 
         // Chart with arrow.
@@ -397,10 +397,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Money bag.
         case 'step-27-2':
           setTimeout(() => {
-            toggleClasses('#step-27-2 img:nth-child(1)', ['fade-in'], ['invisible']);
+            toggleClasses('#step-27-2 div:nth-child(1)', ['fade-in'], ['invisible']);
           }, 500);
           setTimeout(() => {
-            toggleClasses('#step-27-2 img:nth-child(2)', ['fade-in'], ['invisible']);
+            toggleClasses('#step-27-2 div:nth-child(2)', ['fade-in'], ['invisible']);
           }, 1000);
           break;
 
