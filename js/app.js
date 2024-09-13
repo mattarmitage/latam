@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         // Drops.
-        case 'step-10-3':
+        case 'step-10-last':
           if (direction === 'up') {
-            toggleClasses('#step-10-3 div:nth-child(1)', ['invisible'], ['slide-down']);
-            toggleClasses('#step-10-3 div:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last div:nth-child(2)', ['invisible'], ['slide-down']);
           }
           break;
 
@@ -204,10 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
 
         // Drops.
-        case 'step-10-3':
+        case 'step-10-last':
           if (direction === 'down') {
-            toggleClasses('#step-10-3 div:nth-child(1)', ['invisible'], ['slide-down']);
-            toggleClasses('#step-10-3 div:nth-child(2)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last div:nth-child(1)', ['invisible'], ['slide-down']);
+            toggleClasses('#step-10-last div:nth-child(2)', ['invisible'], ['slide-down']);
           }
           break;
 
@@ -332,10 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
         //   break;
 
         // Drops.
-        case 'step-10-3':
+        case 'step-10-last':
           // if (direction === 'down') {
-            toggleClasses('#step-10-3 div:nth-child(1)', ['slide-down'], ['invisible']);
-            toggleClasses('#step-10-3 div:nth-child(2)', ['slide-down'], ['invisible']);
+            toggleClasses('#step-10-last div:nth-child(1)', ['slide-down'], ['invisible']);
+            toggleClasses('#step-10-last div:nth-child(2)', ['slide-down'], ['invisible']);
           // }
           break;
 
