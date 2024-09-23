@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#E88433;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#3DBBA4;stroke-width:2.205;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#AB43A1;stroke-width:2.025;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#B67BB0;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#3DBBA4;stroke-width:2.25;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#3DBBA4;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#4A596D;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#4A596D;stroke-width:2.25;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#A68446;stroke-width:2.25;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#E88433;stroke-width:2.25;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#A68446;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#A68446;stroke-width:2.1422;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#A68446;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;}
+	.st13{fill:none;stroke:#A68446;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,4.6616,0,0,0,0;}
+	.st14{fill:none;stroke:#A68446;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.st15{fill:none;stroke:#A68446;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,5.1796,0,0,0,0;}
+	.st16{fill:none;stroke:#3DBBA4;stroke-width:2.2259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#A68446;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#3DBBA4;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;}
+	.st19{fill:none;stroke:#3DBBA4;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,5.5356,0,0,0,0;}
+	.st20{fill:#3DBBA4;}
+	.st21{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#AB43A1;stroke-width:2.25;stroke-miterlimit:10;}
+	
+		.st22{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#AB43A1;stroke-width:2.25;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1">
+	<g>
+		<g>
+			<line class="st6" x1="24.6" y1="38.4" x2="24.6" y2="42.7"/>
+			<line class="st6" x1="31.7" y1="38.6" x2="31.7" y2="42.9"/>
+			<line class="st6" x1="38.7" y1="38.6" x2="38.7" y2="42.9"/>
+		</g>
+		<g>
+			<line class="st6" x1="61.2" y1="38.4" x2="61.2" y2="42.7"/>
+			<line class="st6" x1="68.3" y1="38.6" x2="68.3" y2="42.9"/>
+			<line class="st6" x1="75.3" y1="38.6" x2="75.3" y2="42.9"/>
+		</g>
+		<g>
+			<path class="st6" d="M61,33.6c0-3.9,3.4-7.1,7.3-7.1c3.9,0,7.3,3.2,7.3,7.1H61z"/>
+			<circle class="st6" cx="68.3" cy="22.3" r="4.3"/>
+		</g>
+		<g>
+			<path class="st6" d="M24.3,33.6c0-3.9,3.4-7.1,7.3-7.1s7.3,3.2,7.3,7.1H24.3z"/>
+			<circle class="st6" cx="31.7" cy="22.3" r="4.3"/>
+		</g>
+		<g>
+			<path class="st6" d="M42.6,22.4c0-3.9,3.4-7.1,7.3-7.1s7.3,3.2,7.3,7.1H42.6z"/>
+			<circle class="st6" cx="50" cy="11" r="4.3"/>
+		</g>
+		<path class="st6" d="M76.7,65.9c0,14.8-12,26.7-26.7,26.7s-26.7-12-26.7-26.7V47.7h16.7v17.7c0,5.6,4.5,10.1,10.1,10.1
+			S60,70.9,60,65.4V47.7h16.7V65.9z"/>
+		<line class="st7" x1="23.3" y1="53.3" x2="39.9" y2="53.3"/>
+		<line class="st7" x1="60.1" y1="53.3" x2="76.7" y2="53.3"/>
+	</g>
+</g>
+<g id="Layer_2">
+</g>
+<g id="Layer_3">
+</g>
+</svg>
