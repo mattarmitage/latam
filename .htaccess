@@ -1,4 +1,4 @@
 AuthName "Please login to view prototype."
 AuthType Basic
 AuthUserFile /home/master/applications/evbwfzwjvj/public_html/.htpasswd
-require user name-of-user
+require user claret
